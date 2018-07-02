@@ -1,8 +1,14 @@
-import React, {Component} from 'react';
+//@flow
+import * as React from 'react';
 
 export const API_URL = "https://test-api-2507.esanjo.net/hotels/v1";
 
-export const Loader = ({loading, children=null}) => {
+type T_loader_props = {
+  loading: boolean,
+  children: ?React$Element<any>
+};
+
+export const Loader = ({loading, children}: T_loader_props) => {
   if (loading) {
     return <div>Loading....</div>;
   } else {
@@ -10,9 +16,18 @@ export const Loader = ({loading, children=null}) => {
   }
 };
 
-export class FetchToken extends Component {
+type T_fetch_token_state = {
+  token: string,
+  loading: boolean
+};
+
+type T_fetch_token_props = {
+  children: (token: string) => React$Element<any>
+};
+
+export class FetchToken extends React.Component <T_fetch_token_props, T_fetch_token_state>{
   state = {
-    token: localStorage.getItem("token"),
+    token: localStorage.getItem("token") || "",
     loading: false
   }
 

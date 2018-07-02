@@ -1,8 +1,20 @@
+//@flow
+
 import React, {Component, Fragment} from 'react';
 import ScrollView from '../../components/ScrollView';
 import HotelList from './HotelList';
 
-class HotelPage extends Component {
+type State = {
+  hotels: Array<Object>,
+  page: number,
+  requestSent: boolean
+};
+
+type Props = {
+  token: string
+}
+
+class HotelPage extends Component<Props, State> {
   state = {
     hotels: [],
     page: 0,

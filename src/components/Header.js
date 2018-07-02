@@ -1,7 +1,8 @@
-import React, {Fragment} from 'react';
+//@flow
+import React from 'react';
 
 const Header = () => (
-  <Fragment>
+  <React.Fragment>
     <div className="header">
       <div>Contact us directly at +971 (55) 895 8452 (Local time 22:19)</div>
       <div>
@@ -28,7 +29,7 @@ const Header = () => (
         <div>Flights</div>
       </div>
     </div>
-  </Fragment>
+  </React.Fragment>
 );
 
 export default Header;

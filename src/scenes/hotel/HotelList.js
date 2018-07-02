@@ -1,6 +1,7 @@
+//@flow
 import React from 'react';
 
-const HotelList = ({list}) =>
+const HotelList = ({list}: {list: Array<Object>}) =>
   <div className="container center">{
     list.map(({image, rating, badge, name, cost}) =>
       <div
