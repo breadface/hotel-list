@@ -1,0 +1,8 @@
+@mixin font-face($filepath, $name, $style, $weight, $format)
+  @font-face
+    font-family: $name
+    font-style: $style
+    font-weight: $weight
+    src: url("assets/fonts/#{$filepath}") format($format)
+
+@include font-face('Avenir/Avenir-Book.otf', 'Avenir', normal, normal, 'opentype')

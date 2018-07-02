@@ -1,0 +1,126 @@
+.header
+  align-items: center
+  background-color: $purple
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 15px 50px
+  font-size: 12.9px
+  font-weight: 500
+  font-style: normal
+  color: $white
+
+  span, button
+    margin: 0 7.5px
+
+  button
+    background: transparent
+    color: $white
+    width: 66.2px
+    height: 21.2px
+    border-radius: 10.6px
+    border: solid 0.9px $white
+
+  @media (max-width: 768px)
+    padding: 15px
+
+.navbar
+  align-items: center
+  box-shadow: 0 9px 10px 0 rgba(24, 26, 33, 0.02)
+  background-color: $white
+  border: solid 1px $grey
+  display: flex
+  flex-wrap: wrap
+  padding: 20px 50px
+  
+  .left
+    display: flex
+  
+    .logo
+      font-size: 24.8px
+      font-weight: 900
+      color: $purple
+      margin-right: 30px
+    
+    .search-input
+      border-left: solid 1px $grey-light
+      border-right: solid 1px $grey-light
+      padding: 0 20px
+      display: flex
+      justify-content: space-around
+      align-items: center
+        
+      .search-icon
+        color: #d5d5de
+        padding-right: 10px
+      
+      input
+        border: none
+        font-size: 15.8px
+        font-weight: 900
+        color: $black
+        padding-right: 10px
+        width: 350px
+        
+        &:focus
+          outline: none
+        
+        &::-webkit-input-placeholder
+          /* Chrome/Opera/Safari
+          font-size: 15.8px
+          font-weight: 900
+          color: $black
+
+        &::-moz-placeholder
+          /* Firefox 19+
+          font-size: 15.8px
+          font-weight: 900
+          color: $black
+        
+        &:-ms-input-placeholder
+          /* IE 10+
+          font-size: 15.8px
+          font-weight: 900
+          color: $black
+        
+        &:-moz-placeholder
+          /* Firefox 18-
+          font-size: 15.8px
+          font-weight: 900
+          color: $black
+          
+      .search-date
+        font-size: 15.8px
+        font-weight: 900
+        color: $black
+  
+        .day-circle
+          align-items: center
+          background-color: $white
+          border: solid 1px $purple
+          border-radius: 100%
+          color: $purple
+          display: inline-flex
+          font-size: 13.8px
+          font-weight: 900
+          height: 36px
+          justify-content: center
+          margin-right: 8px
+          width: 36px
+          transition: all .25s linear
+          
+          &:hover
+            background-color: $purple
+            color: $white
+            cursor: pointer
+            transition: all .25s linear
+
+  
+  .right
+    display: flex
+    font-size: 15.8px
+    font-weight: 900
+    color: $black
+    
+    *
+      margin: 0 30px

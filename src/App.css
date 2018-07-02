@@ -1,0 +1,226 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: normal;
+  src: url("assets/fonts/Avenir/Avenir-Book.otf") format("opentype"); }
+
+hotel-button {
+  background: transparent;
+  color: #fff;
+  width: 66.2px;
+  height: 21.2px;
+  border-radius: 10.6px;
+  border: solid 0.9px #ffffff; }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 30px auto; }
+  .container.center {
+    justify-content: center; }
+  .container .col-30 {
+    margin: 0 15px; }
+
+.header {
+  align-items: center;
+  background-color: #4039e3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 50px;
+  font-size: 12.9px;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff; }
+  .header span, .header button {
+    margin: 0 7.5px; }
+  .header button {
+    background: transparent;
+    color: #ffffff;
+    width: 66.2px;
+    height: 21.2px;
+    border-radius: 10.6px;
+    border: solid 0.9px #ffffff; }
+  @media (max-width: 768px) {
+    .header {
+      padding: 15px; } }
+
+.navbar {
+  align-items: center;
+  box-shadow: 0 9px 10px 0 rgba(24, 26, 33, 0.02);
+  background-color: #ffffff;
+  border: solid 1px #dae0ff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 50px; }
+  .navbar .left {
+    display: flex; }
+    .navbar .left .logo {
+      font-size: 24.8px;
+      font-weight: 900;
+      color: #4039e3;
+      margin-right: 30px; }
+    .navbar .left .search-input {
+      border-left: solid 1px #dbddef;
+      border-right: solid 1px #dbddef;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .navbar .left .search-input .search-icon {
+        color: #d5d5de;
+        padding-right: 10px; }
+      .navbar .left .search-input input {
+        border: none;
+        font-size: 15.8px;
+        font-weight: 900;
+        color: #1d1f22;
+        padding-right: 10px;
+        width: 350px; }
+        .navbar .left .search-input input:focus {
+          outline: none; }
+        .navbar .left .search-input input::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          font-size: 15.8px;
+          font-weight: 900;
+          color: #1d1f22; }
+        .navbar .left .search-input input::-moz-placeholder {
+          /* Firefox 19+ */
+          font-size: 15.8px;
+          font-weight: 900;
+          color: #1d1f22; }
+        .navbar .left .search-input input:-ms-input-placeholder {
+          /* IE 10+ */
+          font-size: 15.8px;
+          font-weight: 900;
+          color: #1d1f22; }
+        .navbar .left .search-input input:-moz-placeholder {
+          /* Firefox 18- */
+          font-size: 15.8px;
+          font-weight: 900;
+          color: #1d1f22; }
+      .navbar .left .search-input .search-date {
+        font-size: 15.8px;
+        font-weight: 900;
+        color: #1d1f22; }
+        .navbar .left .search-input .search-date .day-circle {
+          align-items: center;
+          background-color: #ffffff;
+          border: solid 1px #4039e3;
+          border-radius: 100%;
+          color: #4039e3;
+          display: inline-flex;
+          font-size: 13.8px;
+          font-weight: 900;
+          height: 36px;
+          justify-content: center;
+          margin-right: 8px;
+          width: 36px;
+          transition: all .25s linear; }
+          .navbar .left .search-input .search-date .day-circle:hover {
+            background-color: #4039e3;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all .25s linear; }
+  .navbar .right {
+    display: flex;
+    font-size: 15.8px;
+    font-weight: 900;
+    color: #1d1f22; }
+    .navbar .right * {
+      margin: 0 30px; }
+
+.wrapper {
+  background-image: linear-gradient(to bottom, #f5f9fe, #ffffff); }
+
+.hotel-card .hotel-image {
+  height: 191px;
+  width: 307px; }
+  .hotel-card .hotel-image img {
+    height: 100%;
+    width: 100%; }
+
+.hotel-card .content {
+  margin-bottom: 24px;
+  padding: 15px; }
+  .hotel-card .content .details {
+    align-items: center;
+    display: flex; }
+    .hotel-card .content .details .rating {
+      align-items: center;
+      background-color: #4039e3;
+      border: solid 3px #f9fcfe;
+      border-radius: 100%;
+      color: #ffffff;
+      display: flex;
+      font-size: 13.8px;
+      font-weight: 900;
+      height: 36px;
+      justify-content: center;
+      margin-right: 14px;
+      width: 36px; }
+    .hotel-card .content .details .badge {
+      color: #4039e3;
+      font-size: 13.8px; }
+  .hotel-card .content .name {
+    color: #1d1f22;
+    font-size: 17.8px;
+    font-weight: 900;
+    margin: 14px auto 3px;
+    max-width: 280px; }
+  .hotel-card .content .cost {
+    color: #8d959f;
+    font-size: 15.8px; }
+
+.search-summary {
+  padding: 40px 50px; }
+  .search-summary .average {
+    color: #8d959f;
+    font-size: 15.8px; }
+  .search-summary .places-found {
+    color: #1d1f22;
+    font-size: 23.8px;
+    font-weight: 900;
+    margin: 10px auto; }
+  .search-summary .filter-btn {
+    background: transparent;
+    border: solid 1px rgba(64, 57, 227, 0.56);
+    border-radius: 19px;
+    color: #4039e3;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 12.5px 10px 0;
+    padding: 8.65px 15.32px; }
