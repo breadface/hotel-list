@@ -10,7 +10,11 @@ type T_loader_props = {
 
 export const Loader = ({loading, children}: T_loader_props) => {
   if (loading) {
-    return <div>Loading....</div>;
+    return (
+      <div className="loader-wrapper">
+        <div className="loader"/>
+      </div>
+    );
   } else {
     return children;
   }

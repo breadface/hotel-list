@@ -7,7 +7,8 @@ import HotelList from './HotelList';
 type State = {
   hotels: Array<Object>,
   page: number,
-  requestSent: boolean
+  requestSent: boolean,
+  hasReachedEnd: boolean
 };
 
 type Props = {
@@ -18,7 +19,8 @@ class HotelPage extends Component<Props, State> {
   state = {
     hotels: [],
     page: 0,
-    requestSent: false
+    requestSent: false,
+    hasReachedEnd: false
   }
 
   componentDidMount() {
@@ -26,8 +28,8 @@ class HotelPage extends Component<Props, State> {
   }
 
   loadListings = async () => {
-    const {page, hotels, requestSent} = this.state;
-    if (requestSent) {
+    const {page, hotels, requestSent, hasReachedEnd} = this.state;
+    if (requestSent || hasReachedEnd) {
       return;
     }
 
@@ -43,6 +45,7 @@ class HotelPage extends Component<Props, State> {
         this.setState({
           page: page+1,
           requestSent: false,
+          hasReachedEnd: result.data.length < 8,
           hotels: [...hotels, ...result.data]
         });
       }
